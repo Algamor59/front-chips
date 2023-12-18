@@ -1,0 +1,16 @@
+<ng-container *ngIf="isLoading">
+  <mat-spinner></mat-spinner>
+</ng-container>
+
+<ng-container *ngIf="!isLoading">
+
+  <div *ngFor="let element of catalog.categorie">
+
+    <app-service-view
+    [categorie]="element"></app-service-view>
+
+
+  </div>
+
+
+</ng-container>
