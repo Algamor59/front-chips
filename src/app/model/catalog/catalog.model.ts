@@ -1,23 +1,23 @@
-import {Categorie} from "../categorie/categorie.model";
+import {Chips} from "../chips/chips.model";
 
 export class Catalog {
 
-  private _categorie : Array<Categorie> = [];
+  private _chips : Array<Chips> = [];
 
   constructor(data : any) {
-   if(data.categorie){
-     data.categorie.forEach((uneCategorie : Categorie) => {
-       this.categorie.push(new Categorie(uneCategorie));
+   if(data){
+     data.forEach((uneChips : Chips) => {
+       this._chips.push(new Chips(uneChips));
      });
    }
   }
 
 
-  get categorie(): Array<Categorie> {
-    return this._categorie;
+  get chips(): Array<Chips> {
+    return this._chips;
   }
 
-  set categorie(value: Array<Categorie>) {
-    this._categorie = value;
+  set chips(value: Array<Chips>) {
+    this._chips = value;
   }
 }
