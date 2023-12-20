@@ -3,7 +3,7 @@ import { Catalog } from 'src/app/model/catalog/catalog.model';
 import { Note } from 'src/app/model/note/note.model';
 import {MatButtonModule} from '@angular/material/button';
 import {MatDialog} from '@angular/material/dialog';
-import { DialogCreateExampleDialog } from 'src/app/component/dialog-create/dialog-create.component';
+import { DialogCreateExampleDialog } from 'src/app/component/dialog-note/dialog-note.component';
 
 
 @Component({

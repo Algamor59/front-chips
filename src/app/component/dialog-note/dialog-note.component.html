@@ -1,0 +1,11 @@
+<div mat-dialog-content>
+  <h1><p>Note de la Chips</p></h1>
+    <h2>Reproduction du goût :</h2> {{data.note.reproductionGout}}
+    <h2>Originalité : </h2>{{data.note.originalite}}<br>
+    <h3>Addictivité : </h3>{{data.note.addictivite}}<br>
+    <h3>Bonus : </h3>{{data.note.bonus}}<br>
+    <h3>Note Finale : </h3>{{data.note.note}}<br>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Ok</button>
+</div>

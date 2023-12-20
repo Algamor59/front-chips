@@ -1,31 +1,23 @@
 export class Note {
 
-  private _id : number;
+  public id : number;
 
-  private _reproductionGout : number;
+  public reproductionGout : number;
 
-  private _originalite : number;
+  public originalite : number;
 
-  private _addictivite : number;
+  public addictivite : number;
 
-  private _bonus : number;
+  public bonus : number;
 
-  private _note : number;
+  public note : number;
 
   constructor(data : any){
-    this._id = data.id ? data.id : null;
-    this._originalite = data.originalite ? data.originalite : null;
-    this._addictivite = data.addictivite ? data.addictivite : null;
-    this._bonus = data.bonus ? data.bonus : null;
-    this._note = data.note ? data.note : null;
-    this._reproductionGout = data.reproductionGout ? data.reproductionGout : null;
-  }
-
-  get id() {
-    return this._id;
-  }
-
-  set id(value) {
-    this._id = value;
+    this.id = data.id ? data.id : null;
+    this.originalite = data.originalite ? data.originalite : null;
+    this.addictivite = data.addictivite ? data.addictivite : null;
+    this.bonus = data.bonus ? data.bonus : null;
+    this.note = data.note ? data.note : null;
+    this.reproductionGout = data.reproductionGout ? data.reproductionGout : null;
   }
 }

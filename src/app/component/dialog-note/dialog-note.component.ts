@@ -21,7 +21,7 @@ export interface DialogCreate {
 
 @Component({
   selector: 'dialog-create-example-dialog',
-  templateUrl: 'dialog-create.component.html',
+  templateUrl: 'dialog-note.component.html',
   standalone: true,
   imports: [
     MatFormFieldModule,
