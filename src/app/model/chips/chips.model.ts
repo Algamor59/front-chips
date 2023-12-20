@@ -2,20 +2,20 @@ import {Note} from "../note/note.model";
 
 export class Chips {
 
-  private _id : number;
+  public id : number;
 
   public nom : string;
 
   public marque : string;
 
-  public note : Array<Note> = []
+  public note : Note;
 
 
-  constructor(data : any) {
-    this._id = data.id ? data.id : null;
-    this.nom = data.nom ? data.nom : null;
-    this.marque = data.marque ? data.marque : null;
-    this.note = data.note ? new Note(data.note) : Object.create(null);
+  constructor(id : any, nom : string, marque : string, note : Note) {
+    this.id = 0;
+    this.nom = nom;
+    this.marque = marque;
+    this.note = note ? new Note(note) : Object.create(null);
   }
 
 }

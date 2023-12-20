@@ -1,0 +1,8 @@
+<div mat-dialog-content>
+    <h1><p>Es-tu sûr de vouloir supprimer la chips :</p></h1>
+    <h2> {{data.chips.nom}} - {{data.chips.marque}}</h2>
+    
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Non</button>
+  <button mat-button (click)="onClickDelete(data.chips)">Oui</button>
+</div>

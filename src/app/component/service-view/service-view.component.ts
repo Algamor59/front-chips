@@ -5,7 +5,8 @@ import { Chips } from 'src/app/model/chips/chips.model';
 import {MatButtonModule} from '@angular/material/button';
 import {MatDialog} from '@angular/material/dialog';
 import { DialogNoteExampleDialog } from 'src/app/component/dialog-note/dialog-note.component';
-
+import { DialogDeleteExampleDialog } from '../dialog-delete/dialog-delete.component';
+import { DialogCreateExampleDialog } from '../dialog-create/dialog-create.component';
 
 @Component({
   selector: 'app-service-view',
@@ -38,8 +39,16 @@ export class ServiceViewComponent {
   }
 
   openDialogDelete(chips : Chips): void {
-    const dialogRef = this.dialog.open(DialogNoteExampleDialog, {
+    const dialogRef = this.dialog.open(DialogDeleteExampleDialog, {
     data : {chips : chips}});
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
+  }
+
+  openDialogCreate(): void {
+    const dialogRef = this.dialog.open(DialogCreateExampleDialog);
 
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');

@@ -7,7 +7,7 @@ export class Catalog {
   constructor(data : any) {
    if(data){
      data.forEach((uneChips : Chips) => {
-       this._chips.push(new Chips(uneChips));
+       this._chips.push(new Chips(uneChips.id,uneChips.nom,uneChips.marque,uneChips.note));
      });
    }
   }

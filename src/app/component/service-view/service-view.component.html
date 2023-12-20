@@ -1,5 +1,6 @@
 
 <ng-container>
+  <h1><p> Ajouter une Chips : <button mat-raised-button color="primary" (click)="openDialogCreate()"><i class="fa-solid fa-plus"></i></button></p></h1>
   <table mat-table [dataSource]="catalog.chips" class="mat-elevation-z8">
 
     <ng-container matColumnDef="nom">
@@ -18,7 +19,7 @@
 
     <ng-container matColumnDef="actions">
       <th mat-header-cell *matHeaderCellDef> Action </th>
-      <td mat-cell *matCellDef="let element"><button mat-raised-button color="primary" (click)="openDialog()"><i class="fa-solid fa-plus"></i></button>
+      <td mat-cell *matCellDef="let element">
       <button mat-raised-button color="primary" (click)="openDialog()"><i class="fa-regular fa-pen-to-square"></i></button>
       <button mat-raised-button color="primary" (click)="openDialogDelete(element)"><i class="fa-solid fa-trash"></i></button></td>          
     </ng-container>
