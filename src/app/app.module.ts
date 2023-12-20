@@ -9,22 +9,24 @@ import { ServiceViewComponent } from './component/service-view/service-view.comp
 import {HttpClientModule} from "@angular/common/http";
 import {MatTableModule} from "@angular/material/table";
 import {MatButtonModule} from "@angular/material/button";
+import { IconOverviewExample } from "./icon-overview-example/icon-overview-example.component";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    ServiceViewComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatProgressSpinnerModule,
-    HttpClientModule,
-    MatTableModule,
-    MatButtonModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        ServiceViewComponent
+    ],
+    providers: [],
+    bootstrap: [AppComponent],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatProgressSpinnerModule,
+        HttpClientModule,
+        MatTableModule,
+        MatButtonModule,
+        IconOverviewExample
+    ]
 })
 export class AppModule { }

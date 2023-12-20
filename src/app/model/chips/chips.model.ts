@@ -8,14 +8,14 @@ export class Chips {
 
   public marque : string;
 
-  private _note : Array<Note> = []
+  public note : Array<Note> = []
 
 
   constructor(data : any) {
     this._id = data.id ? data.id : null;
     this.nom = data.nom ? data.nom : null;
     this.marque = data.marque ? data.marque : null;
-    this._note = data.note ? new Note(data.note) : Object.create(null);
+    this.note = data.note ? new Note(data.note) : Object.create(null);
   }
 
 }
