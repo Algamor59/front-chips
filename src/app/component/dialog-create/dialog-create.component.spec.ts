@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { IconOverviewExample } from './icon-overview-example.component';
+import { DialogCreateComponent } from './dialog-create.component';
 
-describe('IconOverviewExampleComponent', () => {
-  let component: IconOverviewExample;
-  let fixture: ComponentFixture<IconOverviewExample>;
+describe('DialogCreateComponent', () => {
+  let component: DialogCreateComponent;
+  let fixture: ComponentFixture<DialogCreateComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [IconOverviewExample]
+      imports: [DialogCreateComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(IconOverviewExample);
+    fixture = TestBed.createComponent(DialogCreateComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

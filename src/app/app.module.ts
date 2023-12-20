@@ -9,7 +9,6 @@ import { ServiceViewComponent } from './component/service-view/service-view.comp
 import {HttpClientModule} from "@angular/common/http";
 import {MatTableModule} from "@angular/material/table";
 import {MatButtonModule} from "@angular/material/button";
-import { IconOverviewExample } from "./icon-overview-example/icon-overview-example.component";
 
 @NgModule({
     declarations: [
@@ -25,8 +24,7 @@ import { IconOverviewExample } from "./icon-overview-example/icon-overview-examp
         MatProgressSpinnerModule,
         HttpClientModule,
         MatTableModule,
-        MatButtonModule,
-        IconOverviewExample
+        MatButtonModule
     ]
 })
 export class AppModule { }
