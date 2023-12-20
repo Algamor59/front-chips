@@ -3,6 +3,7 @@ import {HttpClient} from "@angular/common/http";
 import {Catalog} from "../../model/catalog/catalog.model";
 import {environment} from "../../../environments/environment";
 import { Chips } from 'src/app/model/chips/chips.model';
+import { Note } from 'src/app/model/note/note.model';
 
 
 @Injectable({
@@ -22,7 +23,12 @@ export class CatalogService {
 
   //POST
   createCatalog(chips : Chips){
-    return this.httpClient.post(this.url+ '/save',chips);
+    return this.httpClient.post(this.url+ '/save/chips',chips);
+  }
+
+  //POST
+  createNote(note : Note){
+    return this.httpClient.post(this.url+ '/save/note',note);
   }
 
   //PUT

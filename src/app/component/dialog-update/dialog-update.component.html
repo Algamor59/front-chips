@@ -1,1 +1,22 @@
-<p>dialog-update works!</p>
+<div mat-dialog-content>
+    <ng-container>
+        <form class="form-create" (ngSubmit)="onSendClick()">
+        <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Goût</mat-label>
+            <input matInput placeholder={{data.chips.nom}} name="nom" required [(ngModel)]="nom">
+        </mat-form-field>
+        </p>
+        <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Marque</mat-label>
+            <input matInput placeholder={{data.chips.marque}} name="marque" required [(ngModel)]="marque">
+        </mat-form-field>
+        </p>
+        <p>
+        <button mat-raised-button color="primary" type="submit">Ajouter</button>
+        </p>
+        </form>
+        <button mat-button (click)="onNoClick()">Annuler</button>
+    </ng-container>
+</div>

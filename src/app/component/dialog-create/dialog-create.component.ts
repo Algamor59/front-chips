@@ -48,7 +48,7 @@ export class DialogCreateExampleDialog {
   ) {}
 
   onSendClick(): void{
-    const newChips = new Chips("ajout",this.nom,this.marque,Object.create(null));
+    const newChips = new Chips(0,this.nom,this.marque,Object.create(null));
     if (this.catalogService.createCatalog(newChips).subscribe()){
       
     } else {

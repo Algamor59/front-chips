@@ -1,0 +1,41 @@
+<div mat-dialog-content>
+  <h1><p>Modifier la note :</p></h1>
+    <ng-container>
+        <form class="form-create" (ngSubmit)="onSendClick()">
+        <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Reproduction du goût</mat-label>
+            <input matInput placeholder={{data.chips.note.reproductionGout}} name="reproductionGout" required [(ngModel)]="reproductionGout">
+        </mat-form-field>
+        </p>
+        <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Originalité</mat-label>
+            <input matInput placeholder={{data.chips.note.originalite}} name="originalite" required [(ngModel)]="originalite">
+        </mat-form-field>
+        </p>
+        <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Addictivité</mat-label>
+            <input matInput placeholder={{data.chips.note.addictivite}} name="addictivite" required [(ngModel)]="addictivite">
+        </mat-form-field>
+        </p>
+        <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Ressenti</mat-label>
+            <input matInput placeholder={{data.chips.note.ressenti}} name="ressenti" required [(ngModel)]="ressenti">
+        </mat-form-field>
+        </p>
+        <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Bonus</mat-label>
+            <input matInput placeholder={{data.chips.note.bonus}} name="bonus" required [(ngModel)]="bonus">
+        </mat-form-field>
+        </p>
+        <p>
+        <button mat-raised-button color="primary" type="submit">Modifier</button>
+        </p>
+        </form>
+        <button mat-button (click)="onNoClick()">Annuler</button>
+    </ng-container>
+</div>

@@ -14,13 +14,13 @@ export class Note {
 
   public note : number;
 
-  constructor(data : any){
-    this.id = data.id ? data.id : 22;
-    this.reproductionGout = data.reproductionGout ? data.reproductionGout : 0;
-    this.originalite = data.originalite ? data.originalite : 0;
-    this.addictivite = data.addictivite ? data.addictivite : 0;
-    this.ressenti = data.ressenti ? data.ressenti : 0;
-    this.bonus = data.bonus ? data.bonus : 0;
-    this.note = data.note ? data.note : 0;
+  constructor(id : number, reproductionGout: number, originalite : number, addictivite : number, ressenti : number, bonus : number, note : number){
+    this.id = id ? id : 22;
+    this.reproductionGout = reproductionGout ? reproductionGout : 0;
+    this.originalite = originalite ? originalite : 0;
+    this.addictivite = addictivite ? addictivite : 0;
+    this.ressenti = ressenti ? ressenti : 0;
+    this.bonus = bonus ? bonus : 0;
+    this.note = note ? note : 0;
   }
 }

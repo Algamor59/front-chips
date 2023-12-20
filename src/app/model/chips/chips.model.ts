@@ -12,10 +12,10 @@ export class Chips {
 
 
   constructor(id : any, nom : string, marque : string, note : Note) {
-    this.id = 0;
+    this.id = id ? id : 0;
     this.nom = nom;
     this.marque = marque;
-    this.note = note ? new Note(note) : Object.create(null);
+    this.note = note ? new Note(note.id,note.reproductionGout,note.originalite, note.addictivite, note.ressenti, note.bonus, note.note) : Object.create(null);
   }
 
 }
