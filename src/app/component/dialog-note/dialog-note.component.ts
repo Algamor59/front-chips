@@ -14,13 +14,13 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { Note } from '../../model/note/note.model';
 
-export interface DialogCreate {
+export interface DialogNote {
   note : Note;
 }
 
 
 @Component({
-  selector: 'dialog-create-example-dialog',
+  selector: 'dialog-note-example-dialog',
   templateUrl: 'dialog-note.component.html',
   standalone: true,
   imports: [
@@ -34,10 +34,10 @@ export interface DialogCreate {
     MatDialogClose,
   ],
 })
-export class DialogCreateExampleDialog {
+export class DialogNoteExampleDialog {
   constructor(
-    public dialogRef: MatDialogRef<DialogCreateExampleDialog>,
-    @Inject(MAT_DIALOG_DATA) public data: DialogCreate
+    public dialogRef: MatDialogRef<DialogNoteExampleDialog>,
+    @Inject(MAT_DIALOG_DATA) public data: DialogNote
   ) {}
 
   onNoClick(): void {

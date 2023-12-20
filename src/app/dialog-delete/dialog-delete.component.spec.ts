@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DialogNoteExampleDialog } from './dialog-note.component';
+import { DialogDeleteComponent } from './dialog-delete.component';
 
-describe('DialogNoteExampleDialog', () => {
-  let component: DialogNoteExampleDialog;
-  let fixture: ComponentFixture<DialogNoteExampleDialog>;
+describe('DialogDeleteComponent', () => {
+  let component: DialogDeleteComponent;
+  let fixture: ComponentFixture<DialogDeleteComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [DialogNoteExampleDialog]
+      imports: [DialogDeleteComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(DialogNoteExampleDialog);
+    fixture = TestBed.createComponent(DialogDeleteComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

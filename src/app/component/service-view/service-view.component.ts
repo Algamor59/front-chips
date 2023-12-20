@@ -1,9 +1,10 @@
 import {Component, Input} from '@angular/core';
 import { Catalog } from 'src/app/model/catalog/catalog.model';
 import { Note } from 'src/app/model/note/note.model';
+import { Chips } from 'src/app/model/chips/chips.model';
 import {MatButtonModule} from '@angular/material/button';
 import {MatDialog} from '@angular/material/dialog';
-import { DialogCreateExampleDialog } from 'src/app/component/dialog-note/dialog-note.component';
+import { DialogNoteExampleDialog } from 'src/app/component/dialog-note/dialog-note.component';
 
 
 @Component({
@@ -25,7 +26,7 @@ export class ServiceViewComponent {
   }
 
   openDialogNote(note : Note): void {
-    const dialogRef = this.dialog.open(DialogCreateExampleDialog, {
+    const dialogRef = this.dialog.open(DialogNoteExampleDialog, {
     data : {note : note}});
 
     dialogRef.afterClosed().subscribe(result => {
@@ -34,6 +35,15 @@ export class ServiceViewComponent {
   }
 
   openDialog(): void {
+  }
+
+  openDialogDelete(chips : Chips): void {
+    const dialogRef = this.dialog.open(DialogNoteExampleDialog, {
+    data : {chips : chips}});
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
   }
 
   }
