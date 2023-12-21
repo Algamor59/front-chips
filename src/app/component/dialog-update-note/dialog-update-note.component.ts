@@ -57,17 +57,18 @@ export class DialogUpdateNoteExampleDialog {
     Number(this.reproductionGout);
 
     const finalNote =  Number(this.reproductionGout)+Number(this.originalite)+Number(this.addictivite)+Number(this.ressenti)+Number(this.bonus);
-    if (finalNote <=20){
-      const updateNote = new Note(this.data.chips.note.id, this.reproductionGout, this.originalite, this.addictivite, this.ressenti, this.bonus, finalNote);
-      if (this.catalogService.createNote(updateNote).subscribe(result => {
-      })){
+    if (finalNote <=22){
+      const updateNote = new Note(this.data.chips.id, this.reproductionGout, this.originalite, this.addictivite, this.ressenti, this.bonus, finalNote);
+      const updatedChips = new Chips(this.data.chips.id, this.data.chips.nom, this.data.chips.marque, updateNote);
+      if (this.catalogService.createNote(updateNote).subscribe()){
+          this.catalogService.updateCatalog(this.data.chips.id, updatedChips).subscribe();
       } else {
         alert("/!\\ MISSION FAILED CHEF !");
       };
       window.location.reload();
       this.dialogRef.close();
     } else {
-      alert("/!\\ Le total est supérieur à 20.");
+      alert("/!\\ Le total est supérieur à 22.");
     }
   }
 
